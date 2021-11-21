@@ -21,6 +21,16 @@ a {
     text-decoration: none;
     font-style: normal;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
 
 :root {
     --dark-text-color: #404040;
@@ -41,15 +51,133 @@ a {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-}
-.pre-header-list,
-.header-nav {
-    display: flex;
+    outline: #161F49 solid 1px;
 }
 
+/* FLEX */
+.pre-header-list,
+.header-nav,
+.header-nav-list,
+.hero-box,
+.explore-system-box,
+.explore-link-box,
+.explore-sys-box,
+.explore-text-box,
+.models-type-list {
+    display: flex;
+}
+.hero-box,
+.explore-system-box,
+.explore-link-box,
+.explore-text-box {
+    flex-direction: column;
+}
+.hero-box,
+.explore-system-box,
+.explore-link-box,
+.explore-text-box {
+    align-items: center;
+}
+.btn {
+    text-transform: uppercase;
+    min-width: 220px;
+    height: 52px;
+}
 /* BODY */
 body {
     font-family: 'Roboto', 'sans-serif';
 }
 
 /* HEADER */
+.pre-header-list {
+    padding: 5px 535px;
+}
+.header-nav {
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav-item:not(:last-child) {
+    margin-right: 33px;
+}
+
+/* HERO */
+.hero {
+    padding-top: 120px;
+    padding-bottom: 266px;
+}
+.hero-title,
+.hero-post-title {
+    margin-bottom: 20px;
+}
+
+/* EXPLORE SYSTEM */
+.explore-system {
+    padding-top: 200px;
+    padding-bottom: 751px;
+}
+
+.explore-link-box {
+    margin-bottom: 120px;
+}
+.explore-link-box p {
+    margin-bottom: 21px;
+}
+.explore-link-box img {
+    margin-bottom: 28px;
+}
+.explore-text-box {
+    width: 729px;
+}
+.explore-sys-title {
+    margin-bottom: 44px;
+}
+.explore-sys-text {
+    text-align: center;
+    margin-bottom: 78px;
+}
+
+/* MODELS */
+.models {
+    padding-top: 580px;
+    padding-bottom: 191px;
+}
+.models-type-item {
+    width: 50%;
+}
+.models-type-item:first-child {
+    padding-left: 188px;
+    padding-right: 126px;
+}
+.models-type-item:last-child {
+    padding-right: 70px;
+}
+.models-type-list {
+    margin-bottom: 90px;
+}
+.models-link {
+    display: block;
+    text-align: center;
+}
+.model-pretitle {
+    margin-bottom: 13px;
+}
+.model-title {
+    margin-bottom: 20px;
+}
+.model-text {
+    margin-bottom: 34px;
+}
+.model-price {
+    margin-bottom: 36px;
+}
+
+/* QUOTE */
+.quote {
+    margin-top: 204px;
+    margin-bottom: 204px;
+}
+.quote-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 45px;
+}
